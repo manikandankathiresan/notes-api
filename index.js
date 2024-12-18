@@ -5,7 +5,6 @@ const AutoLoad = require("@fastify/autoload");
 const customErrorPlugin = require("./helper/modules/customError");
 const fastifyRedis = require('@fastify/redis');
 const connectDb = require("./dbConfig/db-init");
-const connectDB = require("./dbConfig/db-init");
 
 
 const PORT = 5000;
@@ -51,7 +50,7 @@ const initApp = async () => {
             console.log(`Server listening at ${address}`); 
         });
 
-        connectDB();  
+        // connectDB();  
 
     } catch (error) {
         console.log('Error during app initialization:', error);

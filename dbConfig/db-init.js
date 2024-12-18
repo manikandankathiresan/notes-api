@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 // MongoDB connection URI (Replace with your actual MongoDB Atlas URI)
 const mongoURI = 'mongodb+srv://Mkprofile98:hrtRdUQ88BJTt9G1@nodejs.co6ty.mongodb.net/?retryWrites=true&w=majority&appName=NodeJS';
+// const mongoURI = 'mongodb://localhost:27017/authentication-system';
 
 const connectDB = async () => {
     try {
