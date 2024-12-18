@@ -1,9 +1,10 @@
+require('dotenv').config();  // Load environment variables from .env file
+
 const fastify = require('fastify')({ logger: true });
 const mongoose = require('mongoose');
 
-// MongoDB connection URI (Replace with your actual MongoDB Atlas URI)
-const mongoURI = 'mongodb+srv://Mkprofile98:hrtRdUQ88BJTt9G1@nodejs.co6ty.mongodb.net/?retryWrites=true&w=majority&appName=NodeJS';
-// const mongoURI = 'mongodb://localhost:27017/authentication-system';
+// MongoDB connection URI from environment variables
+const mongoURI = process.env.MONGOURI;  // Make sure the .env file has the MONGOURI variable set
 
 const connectDB = async () => {
     try {
@@ -38,9 +39,5 @@ const connectDB = async () => {
 
 // Call the connectDB function to establish the connection
 connectDB();
-
-
-
-
 
 module.exports = connectDB;
